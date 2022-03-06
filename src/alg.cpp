@@ -4,7 +4,7 @@
 
 
 double pown(double value, uint16_t n) {
- double step = 1;
+  double step = 1;
     for (uint16_t i = 1; i <= n; i++) {
         step = step * value;
 }
@@ -12,7 +12,7 @@ double pown(double value, uint16_t n) {
 }
 
 uint64_t fact(uint16_t n) {
- uint64_t fac = 1;
+  uint64_t fac = 1;
     for (uint16_t i = 1; i <= n; i++) {
         fac = fac * i;
     }
@@ -20,7 +20,7 @@ uint64_t fact(uint16_t n) {
 }
 
 double calcItem(double x, uint16_t n) {
- double slag = 0;
+  double slag = 0;
     slag = pown(x, n) / fact(n);
     return slag;
 }
@@ -44,7 +44,7 @@ double sin = x;
 }
 
 double cosn(double x, uint16_t count) {
- double cos = 1;
+  double cos = 1;
     uint16_t n = 1;
     for (uint16_t i = 2; i <= count; i + 1) {
         n = 2 * i - 1;
