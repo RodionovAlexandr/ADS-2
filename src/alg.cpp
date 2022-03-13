@@ -35,24 +35,26 @@ double expn(double x, uint16_t count) {
 
 double sinn(double x, uint16_t count) {
   double sin = x;
-   for (uint16_t i = 2; i <= count ; i + 1) {
-        if ((i - 1) % 2 == 0) {
-            sin += calcItem(x, 2 * i - 1);
-        } else {
-         sin -= calcItem(x, 2 * i - 1);
-        }
+  double slag = 0;
+    if (count == 1) {
+        return sin;
+    }
+    for (uint16_t i = 2; i <= count ; i + 1) {
+        slag = (pown(-1, i - 1) * calcItem(x, 2 * i - 1));
+        sin += slag;
     }
     return sin;
 }
 
 double cosn(double x, uint16_t count) {
   double cos = 1;
-     for (uint16_t i = 2; i <= count; i + 1) {
-        if ((i - 1) % 2 == 0) {
-            cos += calcItem(x, 2 * i - 2);
-        } else {
-            cos -= calcItem(x, 2 * i - 2);
-        }
+  double slag = 0;
+    if (count == 1) {
+        return cos;
+    }
+    for (uint16_t i = 2; i <= count; i + 1) {
+        slag = pown(-1, i - 1) * calcItem(x, 2 * i - 1);
+        cos += slag;
     }
     return cos;
 }
