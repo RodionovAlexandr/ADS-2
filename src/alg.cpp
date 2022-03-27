@@ -12,7 +12,7 @@ double pown(double value, uint16_t n) {
 }
     step = 1 / step;
     return step;
-}  
+}
     for (uint16_t i = 1; i <= n; i++) {
         step = step * value;
 }
@@ -20,11 +20,12 @@ double pown(double value, uint16_t n) {
 }
 
 uint64_t fact(uint16_t n) {
-  uint64_t fac = 1;
-    for (uint16_t i = 1; i <= n; i++) {
-        fac = fac * i;
-    }
-    return fac;
+    if(n < 0)
+        return 0;
+    if (n == 0)
+        return 1;
+    else
+        return n * fact(n - 1); 
 }
 
 double calcItem(double x, uint16_t n) {
