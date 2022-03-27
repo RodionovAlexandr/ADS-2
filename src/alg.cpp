@@ -5,6 +5,14 @@
 
 double pown(double value, uint16_t n) {
   double step = 1;
+    if (n < 0) {
+        n = -n;
+        for (uint16_t i = 1; i <= n; i++) {
+        step = step * value;
+}
+    step = 1 / step;
+    return step;
+}  
     for (uint16_t i = 1; i <= n; i++) {
         step = step * value;
 }
