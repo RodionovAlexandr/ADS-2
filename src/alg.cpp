@@ -63,7 +63,7 @@ double cosn(double x, uint16_t count) {
         return cos;
     }
     for (uint16_t i = 2; i <= count; i ++) {
-        slag = pown(-1, i - 1) * calcItem(x, 2 * i - 1);
+        slag = pown(-1, i - 1) * calcItem(x, 2 * i - 2);
         cos += slag;
     }
     return cos;
