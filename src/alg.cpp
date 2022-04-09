@@ -4,15 +4,15 @@
 
 
 double pown(double value, uint16_t n) {
-   double step = 1;
-  if (!n) return 1;
+  double step = 1;
+  if (!n) {
+     return 1;
+  }
     while (n) {
-    if (n % 2 == 0){
+    if (n % 2 == 0) {
       n /= 2;
       value *= value;
-      } 
-      else
-      {
+      } else {
       n--;
       step *= value;
      }
@@ -21,12 +21,12 @@ double pown(double value, uint16_t n) {
 }
 
 uint64_t fact(uint16_t n) {
-    if(n < 0)
+    if (n < 0)
         return 0;
     if (n == 0)
         return 1;
     else
-        return n * fact(n - 1); 
+        return n * fact(n - 1);
 }
 
 double calcItem(double x, uint16_t n) {
